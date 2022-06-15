@@ -1,0 +1,48 @@
+@import "../abstracts/variables";
+@import "../base/typography";
+
+@mixin section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  width: 100%;
+}
+.home {
+  background-color: $taupe-gray;
+  @include section;
+  &__image {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  &__title {
+    color: $white;
+    text-align: center;
+    @include font-raleway($fontWeight: 700);
+  }
+  &__text {
+    color: $white;
+    text-align: left;
+    width: 65%;
+    @include font-raleway($fontWeight: 400);
+  }
+}
+.limache {
+  background-color: $snow;
+  @include section;
+  &__img {
+    @extend .home__image;
+  }
+  &__title {
+    color: $taupe-gray;
+    text-align: center;
+    @include font-raleway($fontWeight: 700);
+  }
+  &__text {
+    color: $gray;
+    text-align: left;
+    width: 65%;
+    @include font-raleway($fontWeight: 400);
+  }
+}

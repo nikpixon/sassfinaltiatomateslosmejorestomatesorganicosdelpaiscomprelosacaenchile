@@ -1,0 +1,10 @@
+@import "../base/typography";
+@import "../themes/themes.scss";
+
+@mixin button-large {
+  @include font-raleway($fontWeight: 700);
+  background-color: $white;
+  color: $granite-gray;
+  border: 1px solid $granite-gray;
+  border-radius: 20px;
+}
